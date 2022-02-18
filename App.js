@@ -1,0 +1,17 @@
+import {View, Text} from 'react-native';
+import React from 'react';
+import {Provider} from 'react-redux';
+// import store from './src/Redux/reducers/index';
+import CounterComponent from './src/Screen/CounterComponent';
+import store from './src/Redux/Store';
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <View style={{backgroundColor: 'green', flex: 1}}>
+        <Text>Redux Practice</Text>
+        <CounterComponent />
+      </View>
+    </Provider>
+  );
+}
